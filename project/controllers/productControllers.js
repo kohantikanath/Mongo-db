@@ -34,7 +34,7 @@ exports.updateProduct = async (req, res) => {
   return res.json(updatedProduct);
 };
 
-exports.deletedProduct = async (req, res) => {
+exports.deleteProduct = async (req, res) => {
   const deletedProduct = await productModel.findByIdAndDelete(
     req.params.id,
     res.body

@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 //produxtSchema
 
 const productSchema = new mongoose.Schema({
@@ -10,7 +12,7 @@ const productSchema = new mongoose.Schema({
     required: true,
   },
   isInStock: {
-    type: String,
+    type: Boolean,
     required: true,
   },
   category: {
@@ -19,4 +21,4 @@ const productSchema = new mongoose.Schema({
   },
 });
 
-const productModel = mongoose.model("products", productSchema);
+module.exports = mongoose.model("products", productSchema);
