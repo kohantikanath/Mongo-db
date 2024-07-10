@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
-
-//produxtSchema
+const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
   product_name: {
@@ -12,7 +10,7 @@ const productSchema = new mongoose.Schema({
     required: true,
   },
   isInStock: {
-    type: Boolean,
+    type: String,
     required: true,
   },
   category: {
